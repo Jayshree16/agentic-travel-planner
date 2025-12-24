@@ -36,56 +36,58 @@ This project follows an **Agent + Tools** design pattern.
 
 ---
 
+
 ## 🧩 Project Structure
 
+```
 AGENTIC-TRAVEL-PLANNER/
 │
 ├── agent/
-│ ├── init.py
-│ ├── agent_prompt.py
-│ ├── tools.py
-│ └── travel_agent.py
+│   ├── __init__.py
+│   ├── agent_prompt.py
+│   ├── tools.py
+│   └── travel_agent.py
 │
 ├── assets/
-│ ├── icons/
-│ ├── images/
-│ └── places/
-│ ├── beach.jpg
-│ ├── fort.jpg
-│ ├── monument.jpg
-│ ├── museum.jpg
-│ ├── palace.jpg
-│ ├── park.jpg
-│ └── temple.jpg
+│   ├── icons/
+│   ├── images/
+│   └── places/
+│       ├── beach.jpg
+│       ├── fort.jpg
+│       ├── monument.jpg
+│       ├── museum.jpg
+│       ├── palace.jpg
+│       ├── park.jpg
+│       └── temple.jpg
 │
 ├── components/
-│ ├── budget_card.py
-│ ├── flight_card.py
-│ ├── hotel_card.py
-│ └── itinerary_card.py
+│   ├── budget_card.py
+│   ├── flight_card.py
+│   ├── hotel_card.py
+│   └── itinerary_card.py
 │
 ├── data/
-│ ├── flights.json
-│ ├── hotels.json
-│ └── places.json
+│   ├── flights.json
+│   ├── hotels.json
+│   └── places.json
 │
 ├── tools/
-│ ├── budget_tool.py
-│ ├── flight_tool.py
-│ ├── hotel_tool.py
-│ ├── places_tool.py
-│ └── weather_tool.py
+│   ├── budget_tool.py
+│   ├── flight_tool.py
+│   ├── hotel_tool.py
+│   ├── places_tool.py
+│   └── weather_tool.py
 │
 ├── streamlit.py
+├── requirements.txt
+├── README.md
+│
 ├── test_agent.py
 ├── test_budget_tool.py
 ├── test_flight_tool.py
 ├── test_hotel_tool.py
 ├── test_places_tool.py
-├── test_weather_tool.py
-│
-├── requirements.txt
-└── README.md
+└── test_weather_tool.py
 
 
 ---
