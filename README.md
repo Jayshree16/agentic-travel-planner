@@ -128,22 +128,40 @@ AGENTIC-TRAVEL-PLANNER/
 ---
 
 ## ⚙️ Installation & Setup
+⚠️ Python Version Requirement
 
-### 1️⃣ Clone the Repository
-```bash
+This project requires Python 3.11
+Python 3.12 / 3.13 may cause dependency issues.
+
+1️⃣ Clone the Repository
 git clone https://github.com/your-username/agentic-travel-planner.git
 cd agentic-travel-planner
 
-2️⃣ Create Virtual Environment
-python -m venv venv
-source venv/bin/activate   # Windows: venv\Scripts\activate
+2️⃣ Create & Activate Virtual Environment (Python 3.11)
+
+Windows (Recommended):
+py -3.11 -m venv venv311
+venv311\Scripts\activate
 
 3️⃣ Install Dependencies
 pip install -r requirements.txt
 
-4️⃣ Run the App
-streamlit run streamlit.py
+4️⃣ Set Environment Variable (Groq API Key)
 
+⚠️ Do NOT hard-code API keys.
+
+Windows (PowerShell):
+
+setx GROQ_API_KEY "your_groq_api_key_here"
+
+
+Restart the terminal after setting the key.
+
+5️⃣ Run the Application
+python -m streamlit run app.py
+
+The app will open at:
+http://localhost:8501
 🧪 Testing
 
 Individual tools and agent logic are unit-tested:
@@ -151,3 +169,11 @@ Individual tools and agent logic are unit-tested:
 python test_agent.py
 python test_flight_tool.py
 python test_weather_tool.py
+
+
+🚀 Deployment Notes (Streamlit Cloud)
+
+-requirements.txt → locked dependencies
+-runtime.txt → forces Python 3.11
+-API key must be added in Streamlit Secrets
+-GROQ_API_KEY = "your_key_here"
